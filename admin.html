@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema Laboral | COBAT 22</title>
+    <title>Administración II | Problema Laboral</title>
     <style>
         :root {
             --bg-cream: #F5E6CA;
@@ -15,7 +15,7 @@
 
         body {
             background-color: var(--bg-cream);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
             color: var(--dark-coffee);
             display: flex;
@@ -32,9 +32,7 @@
             border-bottom: 4px solid var(--soft-brown);
         }
 
-        header img {
-            height: 70px;
-        }
+        header img { height: 70px; }
 
         nav {
             margin: 25px 0;
@@ -62,13 +60,11 @@
             text-transform: uppercase;
             border: 2px solid var(--soft-brown);
             border-radius: 4px;
-            transition: all 0.3s ease;
         }
 
         nav li a:hover, nav li a.active {
             background: var(--soft-brown);
             color: white;
-            border-color: var(--dark-coffee);
         }
 
         .main-container {
@@ -92,41 +88,44 @@
             padding-left: 15px;
         }
 
-        .text-section p {
-            line-height: 1.8;
-            font-size: 16px;
-            text-align: justify;
+        .text-section h2 {
+            font-size: 20px;
+            color: var(--soft-brown);
+            margin-top: 30px;
         }
 
-        .highlight-box {
-            background-color: var(--bg-cream);
-            padding: 20px;
-            border-left: 5px solid var(--dark-coffee);
-            margin: 25px 0;
-            font-style: italic;
-        }
+        .text-section p { line-height: 1.8; text-align: justify; }
 
-        .image-section {
+        .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .image-section img {
+        .sidebar img.main-pic {
             width: 100%;
             border: 3px solid var(--soft-brown);
             padding: 5px;
             background: white;
         }
 
-        .caption {
-            background: var(--dark-coffee);
-            color: white;
-            padding: 8px;
+        .teacher-card {
+            background: var(--bg-cream);
+            border: 2px solid var(--soft-brown);
+            padding: 20px;
             text-align: center;
-            font-size: 12px;
-            letter-spacing: 2px;
         }
+
+        .teacher-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--dark-coffee);
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .teacher-card h3 { margin: 5px 0; font-size: 16px; }
 
         footer {
             background: var(--dark-coffee);
@@ -150,8 +149,8 @@
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="admin.html">Admin II</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="admin.html" class="active">Admin II</a></li>
             <li><a href="historia.html">Conciencia</a></li>
             <li><a href="comu.html">Comunicación</a></li>
             <li><a href="psico.html">Psicología</a></li>
@@ -162,23 +161,28 @@
 
     <div class="main-container">
         <div class="text-section">
-            <h1>Problema Laboral</h1>
-            <p>
-                Bienvenidos al portal informativo del proyecto <strong>"Problema Laboral"</strong>. Este recurso ha sido desarrollado como parte integral de la materia de Tecnologías de la Información y la Comunicación (TICS) en el Colegio de Bachilleres del Estado de Tamaulipas, Plantel 22.
-            </p>
+            <h1>Administración II</h1>
+            <p>La administración es una disciplina fundamental para la resolución de cualquier problemática en el ámbito laboral. En este curso, exploramos cómo la planeación y la organización efectiva permiten optimizar los recursos humanos y materiales dentro de una institución.</p>
             
-            <div class="highlight-box">
-                "El uso estratégico de las herramientas digitales permite una organización eficiente de la información académica y profesional."
-            </div>
-
-            <p>
-                A través de este sitio, presentamos una síntesis técnica de los contenidos abordados durante el semestre en diversas disciplinas, demostrando la capacidad de integración digital y análisis crítico del equipo de desarrollo.
-            </p>
+            <h2>Procesos y Gestión</h2>
+            <p>Durante el semestre, analizamos las etapas del proceso administrativo enfocadas en la mejora continua. El estudio de los manuales de organización y los perfiles de puesto nos permite comprender cómo se estructuran las empresas exitosas y cómo prevenir conflictos internos mediante una comunicación jerárquica clara.</p>
+            
+            <ul>
+                <li>Planeación estratégica.</li>
+                <li>Organización y departamentalización.</li>
+                <li>Dirección y liderazgo de equipos.</li>
+                <li>Control y evaluación de resultados.</li>
+            </ul>
         </div>
 
-        <div class="image-section">
-            <img src="p1.png" alt="Imagen Principal">
-            <div class="caption">DASHBOARD_MAIN_V1</div>
+        <div class="sidebar">
+            <img src="p2.png" alt="Administración" class="main-pic">
+            
+            <div class="teacher-card">
+                <img src="img1.png" alt="Docente Lucía">
+                <h3>Lucía Sánchez</h3>
+                <p style="font-size: 12px; margin: 0;">Docente de Administración</p>
+            </div>
         </div>
     </div>
 
