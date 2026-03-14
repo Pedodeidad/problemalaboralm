@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICS | Problema Laboral</title>
+    <style>
+        :root {
+            --bg-cream: #F5E6CA;
+            --card-white: #FFFFFF;
+            --soft-brown: #BC926A;
+            --dark-coffee: #5D4037;
+            --accent-tan: #E9D5B1;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            color: var(--dark-coffee);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--card-white);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            border-bottom: 4px solid var(--soft-brown);
+        }
+
+        header img { height: 70px; }
+
+        nav {
+            margin: 25px 0;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: var(--dark-coffee);
+            background: var(--accent-tan);
+            display: block;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            border: 2px solid var(--soft-brown);
+            border-radius: 4px;
+        }
+
+        nav li a:hover, nav li a.active {
+            background: var(--soft-brown);
+            color: white;
+        }
+
+        .main-container {
+            background: var(--card-white);
+            width: 90%;
+            max-width: 1100px;
+            border: 2px solid var(--soft-brown);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: 40px;
+            gap: 40px;
+            margin-bottom: 50px;
+            box-shadow: 8px 8px 0px var(--soft-brown);
+        }
+
+        .text-section h1 {
+            font-size: 32px;
+            margin-top: 0;
+            color: var(--dark-coffee);
+            border-left: 10px solid var(--soft-brown);
+            padding-left: 15px;
+        }
+
+        .text-section h2 {
+            font-size: 20px;
+            color: var(--soft-brown);
+            margin-top: 30px;
+        }
+
+        .text-section p { line-height: 1.8; text-align: justify; }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar img.main-pic {
+            width: 100%;
+            border: 3px solid var(--soft-brown);
+            padding: 5px;
+            background: white;
+        }
+
+        .teacher-card {
+            background: var(--bg-cream);
+            border: 2px solid var(--soft-brown);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .teacher-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--dark-coffee);
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .teacher-card h3 { margin: 5px 0; font-size: 16px; }
+
+        footer {
+            background: var(--dark-coffee);
+            color: var(--bg-cream);
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <img src="logo.png" alt="Logo Institucional">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="admin.html">Admin II</a></li>
+            <li><a href="historia.html">Conciencia</a></li>
+            <li><a href="comu.html">Comunicación</a></li>
+            <li><a href="psico.html">Psicología</a></li>
+            <li><a href="tics.html" class="active">TICS</a></li>
+            <li><a href="user.html">Editores</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="text-section">
+            <h1>Tecnologías de la Información II</h1>
+            <p>En este bloque, nos enfocamos en el dominio de herramientas digitales avanzadas que optimizan la productividad y la resolución de problemas en el entorno moderno.</p>
+            
+            <h2>Competencias Digitales</h2>
+            <p>Durante el curso, desarrollamos habilidades clave como la creación de <b>diagramas de flujo</b> para la lógica de procesos, el uso estratégico de la <b>Inteligencia Artificial</b> y la implementación de <b>herramientas colaborativas</b> en la nube. Además, abordamos la <b>atención preventiva</b> de equipos de cómputo y la gestión profesional de bases de datos mediante <b>Microsoft Access</b>.</p>
+            
+            <p>Estas herramientas no solo facilitan la organización de la información, sino que son pilares técnicos para enfrentar cualquier reto laboral con eficiencia y profesionalismo.</p>
+        </div>
+
+        <div class="sidebar">
+            <img src="p6.png" alt="TICS" class="main-pic">
+            
+            <div class="teacher-card">
+                <img src="img5.png" alt="Docente TICS">
+                <h3>Enrique</h3>
+                <p style="font-size: 12px; margin: 0;">Docente de TICS</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 COBAT 22 - REYNOSA, TAMAULIPAS
+    </footer>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            if (audio.paused) { audio.play(); }
+        }
+    </script>
+</body>
+</html>
