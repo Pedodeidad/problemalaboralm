@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editores | Problema Laboral</title>
+    <style>
+        :root {
+            --bg-cream: #F5E6CA;
+            --card-white: #FFFFFF;
+            --soft-brown: #BC926A;
+            --dark-coffee: #5D4037;
+            --accent-tan: #E9D5B1;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            color: var(--dark-coffee);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--card-white);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            border-bottom: 4px solid var(--soft-brown);
+        }
+
+        header img { height: 70px; }
+
+        nav {
+            margin: 25px 0;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: var(--dark-coffee);
+            background: var(--accent-tan);
+            display: block;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            border: 2px solid var(--soft-brown);
+            border-radius: 4px;
+        }
+
+        nav li a:hover, nav li a.active {
+            background: var(--soft-brown);
+            color: white;
+        }
+
+        .main-container {
+            background: var(--card-white);
+            width: 90%;
+            max-width: 1100px;
+            border: 2px solid var(--soft-brown);
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 8px 8px 0px var(--soft-brown);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: var(--dark-coffee);
+            border-left: 10px solid var(--soft-brown);
+            padding-left: 15px;
+            text-align: left;
+        }
+
+        /* --- GRID DE EDITORES --- */
+        .editors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .editor-card {
+            background: var(--bg-cream);
+            border: 2px solid var(--soft-brown);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .editor-card:hover {
+            transform: translateY(-5px);
+            background: var(--card-white);
+        }
+
+        .editor-card img {
+            width: 120px;
+            height: 120px;
+            border: 4px solid var(--dark-coffee);
+            object-fit: cover;
+            margin-bottom: 15px;
+            background: white;
+        }
+
+        .editor-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 16px;
+            color: var(--dark-coffee);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .editor-card p {
+            font-size: 13px;
+            color: var(--soft-brown);
+            font-style: italic;
+            margin: 0;
+        }
+
+        footer {
+            background: var(--dark-coffee);
+            color: var(--bg-cream);
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 13px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <img src="logo.png" alt="Logo Institucional">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="admin.html">Admin II</a></li>
+            <li><a href="historia.html">Conciencia</a></li>
+            <li><a href="comu.html">Comunicación</a></li>
+            <li><a href="psico.html">Psicología</a></li>
+            <li><a href="tics.html">TICS</a></li>
+            <li><a href="user.html" class="active">Editores</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <h1>Equipo de Edición</h1>
+        
+        <div class="editors-grid">
+            
+            <div class="editor-card">
+                <img src="us1.png" alt="Karina Michelle">
+                <h3>Karina Michelle</h3>
+                <p>"Creatividad en cada pixel."</p>
+            </div>
+
+            <div class="editor-card">
+                <img src="us2.png" alt="Hector Guerra">
+                <h3>Hector Guerra</h3>
+                <p>"Innovación y desarrollo técnico."</p>
+            </div>
+
+            <div class="editor-card">
+                <img src="us3.png" alt="Christopher Reyes Guerrero">
+                <h3>Christopher Reyes</h3>
+                <p>"Compromiso con la excelencia digital."</p>
+            </div>
+
+            <div class="editor-card">
+                <img src="us4.png" alt="Marcos Hernandez">
+                <h3>Marcos Hernandez</h3>
+                <p>"Estructura y diseño profesional."</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 COBAT 22 - REYNOSA, TAMAULIPAS | EQUIPO DE TICS
+    </footer>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            if (audio.paused) { audio.play(); }
+        }
+    </script>
+</body>
+</html>
+
